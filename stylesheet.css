@@ -6,6 +6,7 @@ body {
     /* border: 3px solid #383737; */
     border: 6px solid black;
     border-radius: 4px ;
+    margin: 4px;
     
 }
 
@@ -19,7 +20,8 @@ body {
     height: 50px;
     min-height: auto;
     /* background-color: #002212; */
-    font-family: monospace;
+    font-family: 'Times New Roman', Times, serif;
+    /* font-size: 18px; */
     border: 6px solid black;
     border-radius: 4px;
     background-color: rgb(78, 48, 6);
@@ -58,10 +60,10 @@ body {
 
 .panel__right {
   /* flex-basis: 230px; */
-  position: absolute;
-  /* overflow-y: auto; */
-  width: 290px;
-  height: 322px;
+  position: relative;
+  overflow-y: auto;
+  width: 250px;
+  height: 220px;
   background-color: #002212;
   font-family: monospace;
   font-size: 17px;
@@ -97,6 +99,7 @@ body {
   position: relative; */
   flex-basis: 250px;
   position: relative;
+  /* height: 100px; */
   overflow-y: auto;
   background-color: #002212;
   font-family: monospace;
@@ -106,4 +109,11 @@ body {
 }
 .gjs-two-color{
   background-color: rgb(78, 48, 6);
+}
+
+
+.gjs-blocks-cs{
+  font-size: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 900;
 }

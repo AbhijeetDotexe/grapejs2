@@ -1,10 +1,11 @@
 const editor = grapesjs.init({
   container: "#gjs",
   fromElement: false,
-  components: '<h1 style="text-align: center; color: black">This is just for testing</h1>',
-  // attributes: { "some-attribute": "some-value" },
+  components: '<h1 style="text-align: center; color: slategrey">GrapeJS</h1>',
+  attributes: { className: "bg-dark" },
   height: "90vh",
   width: "auto",
+  
   storageManager: false,
   panels: { defaults: [] },
 
@@ -36,14 +37,14 @@ const editor = grapesjs.init({
         buttons: [{
             id: 'show-layers',
             active: true,
-            label: `<i class="bi bi-layers"></i>`,
+            label: `<i class="bi bi-stack"></i>`,
             command: 'show-layers',
             // Once activated disable the possibility to turn it off
             togglable: false,
           }, {
             id: 'show-style',
             active: true,
-            label: `<i class="bi bi-filetype-css"></i>`,
+            label: `<i class="bi bi-border-style"></i>`,
             command: 'show-styles',
             togglable: false,
         }],
@@ -186,23 +187,26 @@ editor.BlockManager.add('Navbar', {
   label: 'Navbar',
   category: 'Navigation',
   content: `
-  <nav class="navbar navbar-expand-sm bg-light">
-
-<div class="container-fluid">
-<!-- Links -->
-<ul class="navbar-nav">
-<li class="nav-item">
-  <a class="nav-link" href="#">Link 1</a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" href="#">Link 2</a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" href="#">Link 3</a>
-</li>
-</ul>
-</div>
-
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar w/ text</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+    </span>
+  </div>
 </nav>`
 })
 
